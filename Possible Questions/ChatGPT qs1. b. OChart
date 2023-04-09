@@ -1,0 +1,23 @@
+public class OrgChartTest {
+
+    public static void main(String[] args) {
+        Organization org = new Organization("My Company");
+        
+        Department engineering = new Department("Engineering");
+        engineering.addEmployee(new Employee("John Doe", "Software Engineer"));
+        engineering.addEmployee(new Employee("Jane Smith", "UX Designer"));
+        engineering.setManager(new Employee("Bob Johnson", "Engineering Manager"));
+        org.addDepartment(engineering);
+        
+        Department sales = new Department("Sales");
+        sales.addEmployee(new Employee("Mike Brown", "Sales Manager"));
+        sales.addEmployee(new Employee("Lisa Lee", "Sales Rep"));
+        org.addDepartment(sales);
+        
+        Employee employee = org.getEmployee("Jane Smith");
+        System.out.println(employee.getName() + " is a " + employee.getTitle() + " in the " + employee.getDepartment().getName() + " department.");
+        
+        Department department = org.getDepartment("Sales");
+        System.out.println(department.getName() + " has " + department.getEmployees().size() + " employees and is managed by " + department.getManager().getName() + ".");
+    }
+}
