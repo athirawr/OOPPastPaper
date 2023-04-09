@@ -1,0 +1,40 @@
+------------------------------------------
+|             Registration                |
+------------------------------------------
+| - firstName: String                     |
+| - lastName: String                      |
+| - email: String                         |
+| - password: String                      |
+| - confirmPassword: String               |
+| - dateOfBirth: Date                      |
+| - gender: String                        |
+| - phoneNumber: String                   |
+| - address: String                       |
+------------------------------------------
+| + setFirstName(firstName: String): void |
+| + getFirstName(): String                |
+| + setLastName(lastName: String): void   |
+| + getLastName(): String                 |
+| + setEmail(email: String): void         |
+| + getEmail(): String                    |
+| + setPassword(password: String): void   |
+| + getPassword(): String                 |
+| + setConfirmPassword(confirmPassword: String): void|
+| + getConfirmPassword(): String          |
+| + setDateOfBirth(dateOfBirth: Date): void|
+| + getDateOfBirth(): Date                |
+| + setGender(gender: String): void       |
+| + getGender(): String                   |
+| + setPhoneNumber(phoneNumber: String): void|
+| + getPhoneNumber(): String              |
+| + setAddress(address: String): void     |
+| + getAddress(): String                  |
+------------------------------------------
+
+
+Note that this is a very basic UML diagram for a registration form backend. 
+Depending on the specific requirements of the registration form, additional attributes and methods may need to be added. 
+Additionally, there may be other classes or relationships that are not represented in this diagram.
+
+
+
