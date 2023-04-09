@@ -1,0 +1,52 @@
+import java.util.List;
+
+public class RegistrationTest {
+ 
+ public static void main(String[] args) {
+ 
+ // Create a new Registration object
+ Registration registration = new Registration();
+ 
+ // Create some test students
+ Student student1 = new Student("jdoe", "password", "jdoe@example.com", "John", "Doe");
+ Student student2 = new Student("msmith", "password", "msmith@example.com", "Mary", "Smith");
+ 
+ // Add the students to the registration system
+ registration.addStudent(student1);
+ registration.addStudent(student2);
+ 
+ // Create some test instructors
+ Instructor instructor1 = new Instructor("jsmith", "password", "jsmith@example.com", "John", "Smith");
+ Instructor instructor2 = new Instructor("klee", "password", "klee@example.com", "Karen", "Lee");
+ 
+ // Add the instructors to the registration system
+ registration.addInstructor(instructor1);
+ registration.addInstructor(instructor2);
+ 
+ // Create some test courses
+ Course course1 = new Course("Math 101", instructor1);
+ Course course2 = new Course("English 101", instructor2);
+ 
+ // Add the courses to the registration system
+ registration.addCourse(course1);
+ registration.addCourse(course2);
+ 
+ // Enroll the students in the courses
+ registration.enrollStudentInCourse(student1, course1);
+ registration.enrollStudentInCourse(student2, course2);
+ 
+ // Print out the list of courses for each student
+ List<Course> coursesForStudent1 = registration.getCoursesForStudent(student1);
+ List<Course> coursesForStudent2 = registration.getCoursesForStudent(student2);
+ 
+ System.out.println(student1.getFirstName() + " " + student1.getLastName() + " is enrolled in the following courses:");
+ for (Course course : coursesForStudent1) {
+ System.out.println(course.getName() + " (instructor: " + course.getInstructor().getFirstName() + " " + course.getInstructor().getLastName() + ")");
+ }
+ 
+ System.out.println(student2.getFirstName() + " " + student2.getLastName() + " is enrolled in the following courses:");
+ for (Course course : coursesForStudent2) {
+ System.out.println(course.getName() + " (instructor: " + course.getInstructor().getFirstName() + " " + course.getInstructor().getLastName() + ")");
+ }
+ }
+}
