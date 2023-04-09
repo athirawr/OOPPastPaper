@@ -1,0 +1,46 @@
+public class UMLTest {
+
+    public static void main(String[] args) {
+        UMLModel model = new UMLModel();
+        
+        Class class1 = new Class("Person");
+        class1.addAttribute(new Attribute("name", "String"));
+        class1.addMethod(new Method("getName", "String"));
+        
+        Class class2 = new Class("Address");
+        class2.addAttribute(new Attribute("street", "String"));
+        class2.addMethod(new Method("getStreet", "String"));
+        
+        model.addClass(class1);
+        model.addClass(class2);
+        
+        Association association = new Association("lives at", class1, class2);
+        association.setType("Composition");
+        model.addAssociation(association);
+        
+        Class c1 = model.getClass("Person");
+        Class c2 = model.getClass("Address");
+        
+        System.out.println("Class " + c1.getName() + " has attributes:");
+        for (Attribute attribute : c1.getAttributes()) {
+            System.out.println("- " + attribute.getName() + " : " + attribute.getType());
+        }
+        System.out.println("Class " + c1.getName() + " has methods:");
+        for (Method method : c1.getMethods()) {
+            System.out.println("- " + method.getName() + " : " + method.getReturnType());
+        }
+        System.out.println("Class " + c2.getName() + " has attributes:");
+        for (Attribute attribute : c2.getAttributes()) {
+            System.out.println("- " + attribute.getName() + " : " + attribute.getType());
+        }
+        System.out.println("Class " + c2.getName() + " has methods:");
+        for (Method method : c2.getMethods()) {
+            System.out.println("- " + method.getName() + " : " + method.getReturnType());
+        }
+        
+        System.out.println("Associations:");
+        for (Association a : model.getAssociations()) {
+            System.out.println(a.getSource().getName() + " " + a.getType() + " " + a.getDestination().getName());
+        }
+    }
+}
