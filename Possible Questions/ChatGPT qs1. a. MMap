@@ -1,0 +1,22 @@
++------------------------+
+|        MindMap         |
++------------------------+
+| - root : MindMapNode   |
++------------------------+
+| + addNode(node : MindMapNode) : void |
+| + removeNode(node : MindMapNode) : void |
+| + getRoot() : MindMapNode |
++------------------------+
+
++------------------------+
+|      MindMapNode       |
++------------------------+
+| - text : String        |
+| - children : List<MindMapNode> |
++------------------------+
+| + getText() : String   |
+| + setText(text : String) : void |
+| + getChildren() : List<MindMapNode> |
+| + addChild(child : MindMapNode) : void |
+| + removeChild(child : MindMapNode) : void |
++------------------------+
