@@ -1,0 +1,21 @@
+public static void main(String[] args) {
+    FlowchartDiagram diagram = new FlowchartDiagram();
+    Shape startShape = new StartShape(10, 10, 50, 50);
+    Shape processShape = new ProcessShape(100, 100, 100, 50);
+    DecisionShape decisionShape = new DecisionShape(200, 200, 100, 50, "Is it true?");
+    
+    diagram.addShape(startShape);
+    diagram.addShape(processShape);
+    diagram.addShape(decisionShape);
+    
+    Shape[] shapes = diagram.getShapes();
+    for (Shape shape : shapes) {
+        shape.draw();
+    }
+    
+    diagram.removeShape(startShape);
+    shapes = diagram.getShapes();
+    for (Shape shape : shapes) {
+        shape.draw();
+    }
+}
