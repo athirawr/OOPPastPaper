@@ -8,8 +8,7 @@ public class Footballer {
     }
 
     public void addGoal(int num){
-        numGoals = num;
-        numGoals++;
+        numGoals += num;
     }
 
     public String getName() {
