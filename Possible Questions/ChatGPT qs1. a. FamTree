@@ -1,0 +1,40 @@
++------------------------+
+|       FamilyTree       |
++------------------------+
+| - root : FamilyTreeNode |
++------------------------+
+| + addNode(node : FamilyTreeNode) : void |
+| + removeNode(node : FamilyTreeNode) : void |
+| + getRoot() : FamilyTreeNode |
++------------------------+
+
++------------------------+
+|    FamilyTreeNode      |
++------------------------+
+| - name : String        |
+| - gender : String      |
+| - birthdate : Date     |
+| - deathdate : Date     |
+| - children : List<FamilyTreeNode> |
+| - spouse : FamilyTreeNode |
+| - mother : FamilyTreeNode |
+| - father : FamilyTreeNode |
++------------------------+
+| + getName() : String   |
+| + setName(name : String) : void |
+| + getGender() : String |
+| + setGender(gender : String) : void |
+| + getBirthdate() : Date |
+| + setBirthdate(birthdate : Date) : void |
+| + getDeathdate() : Date |
+| + setDeathdate(deathdate : Date) : void |
+| + getChildren() : List<FamilyTreeNode> |
+| + addChild(child : FamilyTreeNode) : void |
+| + removeChild(child : FamilyTreeNode) : void |
+| + getSpouse() : FamilyTreeNode |
+| + setSpouse(spouse : FamilyTreeNode) : void |
+| + getMother() : FamilyTreeNode |
+| + setMother(mother : FamilyTreeNode) : void |
+| + getFather() : FamilyTreeNode |
+| + setFather(father : FamilyTreeNode) : void |
++------------------------+
