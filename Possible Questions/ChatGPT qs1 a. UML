@@ -1,0 +1,87 @@
++------------------+
+|     UMLModel     |
++------------------+
+| - classes: Class[]|
+| - associations: Association[]|
+|------------------|
+| + addClass(c: Class): void|
+| + removeClass(c: Class): void|
+| + getClass(name: String): Class|
+| + getClasses(): Class[]|
+| + addAssociation(a: Association): void|
+| + removeAssociation(a: Association): void|
+| + getAssociation(name: String): Association|
+| + getAssociations(): Association[]|
++------------------+
+
++--------------+
+|    Class     |
++--------------+
+| - name: String|
+| - attributes: Attribute[]|
+| - methods: Method[]|
+|------------------|
+| + setName(name: String): void|
+| + getName(): String|
+| + addAttribute(attr: Attribute): void|
+| + removeAttribute(attr: Attribute): void|
+| + getAttributes(): Attribute[]|
+| + addMethod(method: Method): void|
+| + removeMethod(method: Method): void|
+| + getMethods(): Method[]|
++--------------+
+
++--------------+
+|  Association |
++--------------+
+| - source: Class|
+| - destination: Class|
+| - type: String|
+|------------------|
+| + setType(type: String): void|
+| + getType(): String|
+| + setSource(source: Class): void|
+| + getSource(): Class|
+| + setDestination(destination: Class): void|
+| + getDestination(): Class|
++--------------+
+
++--------------+
+|  Attribute   |
++--------------+
+| - name: String|
+| - type: String|
+|------------------|
+| + setName(name: String): void|
+| + getName(): String|
+| + setType(type: String): void|
+| + getType(): String|
++--------------+
+
++--------------+
+|    Method    |
++--------------+
+| - name: String|
+| - parameters: Parameter[]|
+| - returnType: String|
+|------------------|
+| + setName(name: String): void|
+| + getName(): String|
+| + setReturnType(type: String): void|
+| + getReturnType(): String|
+| + addParameter(parameter: Parameter): void|
+| + removeParameter(parameter: Parameter): void|
+| + getParameters(): Parameter[]|
++--------------+
+
++--------------+
+|  Parameter  |
++--------------+
+| - name: String|
+| - type: String|
+|------------------|
+| + setName(name: String): void|
+| + getName(): String|
+| + setType(type: String): void|
+| + getType(): String|
++--------------+
