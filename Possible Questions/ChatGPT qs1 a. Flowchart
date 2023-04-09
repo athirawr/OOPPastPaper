@@ -1,0 +1,50 @@
++---------------------+
+|   FlowchartDiagram   |
++---------------------+
+| - shapes: Shape[]    |
+|---------------------|
+| + addShape(shape: Shape): void |
+| + removeShape(shape: Shape): void |
+| + getShapes(): Shape[] |
++---------------------+
+
++------------------+
+|      Shape       |
++------------------+
+| - x: int          |
+| - y: int          |
+| - width: int      |
+| - height: int     |
+|------------------|
+| + draw(): void    |
+| + getX(): int     |
+| + getY(): int     |
+| + getWidth(): int |
+| + getHeight(): int|
++------------------+
+
++------------------+
+|     StartShape    |
++------------------+
+|                  |
+|------------------|
+| + draw(): void    |
++------------------+
+
++------------------+
+|    ProcessShape   |
++------------------+
+|                  |
+|------------------|
+| + draw(): void    |
++------------------+
+
++------------------+
+|     DecisionShape |
++------------------+
+| - condition: string |
+|------------------|
+| + draw(): void    |
+| + getCondition(): string |
+| + setCondition(condition: string): void |
++------------------+
