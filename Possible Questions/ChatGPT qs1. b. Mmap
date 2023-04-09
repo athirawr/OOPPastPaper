@@ -1,0 +1,27 @@
+public class MindMapTest {
+
+    public static void main(String[] args) {
+        MindMapNode root = new MindMapNode("Root");
+        
+        MindMapNode node1 = new MindMapNode("Node 1");
+        root.addChild(node1);
+        
+        MindMapNode node2 = new MindMapNode("Node 2");
+        root.addChild(node2);
+        
+        MindMapNode node11 = new MindMapNode("Node 1.1");
+        node1.addChild(node11);
+        
+        MindMapNode node12 = new MindMapNode("Node 1.2");
+        node1.addChild(node12);
+        
+        MindMap mindMap = new MindMap(root);
+        
+        System.out.println("Root node: " + mindMap.getRoot().getText());
+        
+        System.out.println("Node 1 has " + node1.getChildren().size() + " children.");
+        System.out.println("Node 2 has " + node2.getChildren().size() + " children.");
+        System.out.println("Node 1.1 has " + node11.getChildren().size() + " children.");
+        System.out.println("Node 1.2 has " + node12.getChildren().size() + " children.");
+    }
+}
