@@ -1,0 +1,30 @@
+import java.util.Date;
+
+public class RegistrationTest {
+
+    public static void main(String[] args) {
+        Registration registration = new Registration();
+        
+        // Set registration information
+        registration.setFirstName("John");
+        registration.setLastName("Doe");
+        registration.setEmail("johndoe@example.com");
+        registration.setPassword("password123");
+        registration.setConfirmPassword("password123");
+        registration.setDateOfBirth(new Date(1990, 1, 1));
+        registration.setGender("Male");
+        registration.setPhoneNumber("123-456-7890");
+        registration.setAddress("123 Main Street");
+        
+        // Retrieve registration information
+        System.out.println("First Name: " + registration.getFirstName());
+        System.out.println("Last Name: " + registration.getLastName());
+        System.out.println("Email: " + registration.getEmail());
+        System.out.println("Password: " + registration.getPassword());
+        System.out.println("Confirm Password: " + registration.getConfirmPassword());
+        System.out.println("Date of Birth: " + registration.getDateOfBirth());
+        System.out.println("Gender: " + registration.getGender());
+        System.out.println("Phone Number: " + registration.getPhoneNumber());
+        System.out.println("Address: " + registration.getAddress());
+    }
+}
