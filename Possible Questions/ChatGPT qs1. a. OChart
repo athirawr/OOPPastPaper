@@ -1,0 +1,45 @@
++-------------------------------------+
+|             Organization            |
++-------------------------------------+
+| - name : String                      |
+| - employees : List<Employee>         |
+| - departments : List<Department>     |
++-------------------------------------+
+| + addEmployee(employee : Employee)  |
+| + removeEmployee(employee : Employee)|
+| + getEmployee(name : String) : Employee |
+| + addDepartment(department : Department) |
+| + removeDepartment(department : Department) |
+| + getDepartment(name : String) : Department |
++-------------------------------------+
+
++-------------------------------------+
+|             Employee                |
++-------------------------------------+
+| - name : String                      |
+| - title : String                     |
+| - department : Department            |
++-------------------------------------+
+| + getName() : String                 |
+| + setName(name : String) : void      |
+| + getTitle() : String                |
+| + setTitle(title : String) : void    |
+| + getDepartment() : Department       |
+| + setDepartment(department : Department) : void|
++-------------------------------------+
+
++-------------------------------------+
+|            Department               |
++-------------------------------------+
+| - name : String                      |
+| - employees : List<Employee>         |
+| - manager : Employee                 |
++-------------------------------------+
+| + getName() : String                 |
+| + setName(name : String) : void      |
+| + getEmployees() : List<Employee>    |
+| + addEmployee(employee : Employee) : void |
+| + removeEmployee(employee : Employee) : void |
+| + getManager() : Employee            |
+| + setManager(manager : Employee) : void |
++-------------------------------------+
